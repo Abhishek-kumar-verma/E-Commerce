@@ -108,7 +108,6 @@ const ProductCard = ({ data }) => {
             color="#444"
             title="Add to cart"
           />
-          
         </div>
       </div>
     </>
