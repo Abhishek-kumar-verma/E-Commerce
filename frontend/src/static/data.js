@@ -229,7 +229,7 @@ export const navItems = [
       title: "Gifts",
       subTitle: "",
       image_Url:
-        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+        "https://th.bing.com/th/id/OIP.7rTlTKI7DgJQPR3ZUi_pWgHaFl?pid=ImgDet&rs=1",
     },
     {
       id: 7,

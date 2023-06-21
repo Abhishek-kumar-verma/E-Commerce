@@ -1,19 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-import { LoginPage } from "./Routes";
-import { SignupPage } from "./Routes";
-import { ActivationPage } from "./Routes";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ActivationPage, SignupPage, LoginPage } from "./Routes";
+import { HomePage } from "./Routes";
 import { useEffect } from "react";
 import axios from "axios";
 import { server } from "./server";
 import Store from "./redux/store";
 import { loadUser } from "./redux/actions/user";
 function App() {
-
-  useEffect(() =>{
+  useEffect(() => {
     //  axios.get(`${server}/user/getuser`,{withCredentials:true}).then((res)=>{
     //   toast.success(res.data.message);
     //  }).catch((err)=>{
@@ -22,10 +21,11 @@ function App() {
     //  })
 
     Store.dispatch(loadUser());
-  },[])
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/sign-up" element={<SignupPage />}></Route>
         <Route
